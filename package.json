@@ -4,7 +4,7 @@
     "description": "Highlights Autosys JIL syntax",
     "version": "0.1.0",
     "engines": {
-        "vscode": "^1.48.0"
+        "vscode": "^1.45.0"
     },
     "categories": [
         "Programming Languages"
