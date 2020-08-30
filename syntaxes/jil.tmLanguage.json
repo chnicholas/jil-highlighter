@@ -1,54 +1,54 @@
 {
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "jil",
-    "patterns": [
-        {
-            "include": "#keywords"
-        },
-        {
-            "include": "#strings"
-        }
-    ],
-    "repository": {
-        "keywords": {
-            "patterns": [
-                {
-                    "name": "constant.language",
-                    "match": "((?<=job_type:\\s+)\\b(b|box|BOX|c|cmd|CMD|ft|FT|fw|FW)\\b|(?<=days_of_week:.*)\\b(mo|tu|we|th|fr)\\b|(?<=condition:.*)s\\(.+?\\)|(?<=permission:.*)\\b(gx|ge|wx|we|mx|me)\\b)"
-                },
-                {
-                    "name": "comment.line.number-sign.jil",
-                    "match": "#.*$"
-                },
-                {
-                    "name": "constant.numeric",
-                    "match": "\\b[0-9]+\\b"
-                },
-                {
-                    "name": "keyword.control.jil",
-                    "match": "\\b(alarm_if_fail|application|auto_delete|auto_hold|avg_runtime|box_name|box_terminator|command|condition|date_conditions|days_of_week|description|exclude_calendar|group|insert_job|job_load|machine|max_run_alarm|min_run_alarm|must_complete_times|must_start_times|n_retrys|notification_id|notification_msg|owner|permission|priority|resources|run_calendar|job_type|start_mins|run_window|term_run_time|timezone|send_notification|service_desk|start_times|svc_desk_attr|svcdesk_imp|svcdesk_pri|svcdesk_sev|std_err_file|std_out_file)\\b"
-                },
-                {
-                    "name": "keyword.operator.jil",
-                    "match": "(\\||&|and|or)"
-                },
-                {
-                    "name": "variable.parameter.jil",
-                        "match": "((?<=command:)\\s+.*|(?<=insert_job:)\\s+.*(?=job_type:))"
-                }
-            ]
-        },
-        "strings": {
-            "name": "string.quoted.double.jil",
-            "begin": "\"",
-            "end": "\"",
-            "patterns": [
-                {
-                    "name": "constant.character.escape.jil",
-                    "match": "\\\\."
-                }
-            ]
-        }
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "jil",
+  "patterns": [
+    {
+      "include": "#keywords"
     },
-    "scopeName": "scope.jil"
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "match": "((?<=job_type:\\s+)\\b(b|box|BOX|c|cmd|CMD|ft|FT|fw|FW)\\b|(?<=days_of_week:.*)\\b(mo|tu|we|th|fr)\\b|(?<=condition:.*)s\\(.+?\\)|(?<=permission:.*)\\b(gx|ge|wx|we|mx|me)\\b)",
+          "name": "constant.language"
+        },
+        {
+          "match": "#.*$",
+          "name": "comment.line.number-sign.jil"
+        },
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric"
+        },
+        {
+          "match": "\\b(alarm_if_fail|application|auto_delete|auto_hold|avg_runtime|box_name|box_terminator|command|condition|date_conditions|days_of_week|description|exclude_calendar|group|insert_job|job_load|machine|max_run_alarm|min_run_alarm|must_complete_times|must_start_times|n_retrys|notification_id|notification_msg|owner|permission|priority|resources|run_calendar|job_type|start_mins|run_window|term_run_time|timezone|send_notification|service_desk|start_times|svc_desk_attr|svcdesk_imp|svcdesk_pri|svcdesk_sev|std_err_file|std_out_file)\\b",
+          "name": "keyword.control.jil"
+        },
+        {
+          "match": "(\\||&|and|or)",
+          "name": "keyword.operator.jil"
+        },
+        {
+          "match": "((?<=command:)\\s+.*|(?<=insert_job:)\\s+.*(?=job_type:))",
+          "name": "variable.parameter.jil"
+        }
+      ]
+    },
+    "strings": {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.jil",
+      "patterns": [
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.jil"
+        }
+      ]
+    }
+  },
+  "scopeName": "scope.jil"
 }

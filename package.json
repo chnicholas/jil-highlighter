@@ -2,7 +2,7 @@
     "name": "jil-highlighter",
     "displayName": "JIL Highlighter",
     "description": "Highlights Autosys JIL syntax",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.48.0"
     },
@@ -10,16 +10,28 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "jil",
-            "aliases": ["jil", "jil"],
-            "extensions": [".jil"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "jil",
-            "scopeName": "scope.jil",
-            "path": "./syntaxes/jil.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "jil",
+                "aliases": [
+                    "jil",
+                    "jil"
+                ],
+                "extensions": [
+                    ".jil"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "jil",
+                "scopeName": "scope.jil",
+                "path": "./syntaxes/jil.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^3.14.0"
     }
 }
