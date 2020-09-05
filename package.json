@@ -2,6 +2,8 @@
     "name": "jil-highlighter",
     "displayName": "JIL Highlighter",
     "description": "Highlights Autosys JIL syntax",
+    "icon": "images/jil-highlighter-icon.png",
+    "publisher": "chnicholas",
     "version": "0.1.0",
     "engines": {
         "vscode": "^1.45.0"
