@@ -4,12 +4,21 @@
     "description": "Highlights Autosys JIL syntax",
     "icon": "images/jil-highlighter-icon.png",
     "publisher": "chnicholas",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chnicholas/jil-highlighter"
+    },    
     "version": "0.1.0",
     "engines": {
         "vscode": "^1.45.0"
     },
     "categories": [
         "Programming Languages"
+    ],
+    "keywords": [
+        "autosys",
+        "jil"
     ],
     "contributes": {
         "languages": [
